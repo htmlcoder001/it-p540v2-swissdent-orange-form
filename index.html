@@ -107,153 +107,113 @@ a:visited,
         </style>
         
         <!-- Header -->
-        <style id="font-faces">
+        <style>
             @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-regular-webfont.woff2") format("woff2");url("fonts/agaramondpro-regular-webfont.woff") format("woff");
+                font-family: "NationalBold";
+                src: url("fonts/National-Bold.ttf")format("truetype"),
+                url("fonts/National-Bold.otf")format("opentype");
             }
-    
             @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-bold-webfont.woff2") format("woff2");url("fonts/agaramondpro-bold-webfont.woff") format("woff");
-            }
-    
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-semibold-webfont.woff2") format("woff2");url("fonts/agaramondpro-semibold-webfont.woff") format("woff");
-            }
-            
-            @font-face {
-                font-family: FBDidotS;
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/FBDidotS-Light.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Bold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-DemiBold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Medium.woff") format("woff");
+                font-family: "NationalBlack";
+                src: url("fonts/National-Black.ttf")format("truetype"),
+                url("fonts/National-Black.otf")format("opentype");
             }
         </style>
-    
+        
+        
         <style>
+            #content {
+                margin-top: 80px;
+            }
             .webt-header {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
-            }
-            .webt-header__top {
-                border-bottom: 1px solid rgb(224, 224, 224);
+                position: fixed;
                 width: 100%;
-                height: 64px;
-                position: relative;
+                top: 0;
+                left: 0;
+                height: 50px;
+                background-color: #fff;
+                z-index: 999;
             }
-            .webt-top__wrapper {
-                padding: 16px;
+            .webt-header__wrapper {
+                max-width: 1200px;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 margin: 0 auto;
-                width: 100%;
                 height: 100%;
             }
-            .webt-top__menu {
-                display: block;
-                text-decoration: none;
-                -webkit-transition: all .3s;
-                -moz-transition: all .3s;
-                -ms-transition: all .3s;
-                -o-transition: all .3s;
-                transition: all .3s;
-            }
-            .webt-top__menu:hover {
-                text-decoration: none;
-                opacity: 0.8;
-            }
-            .webt-top__logo {
-                width: 128px;
-                height: 30px;
-                display: block;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-    
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-            }
-            .webt-logo__img {
-                max-width: 100%;
-            }
-            .webt-top__actions {
-                display: block;
-                height: 32px;
-                width: 200px;
-                background-image: url(images/header-actions.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                -webkit-background-size: contain;
-                background-size: contain;
-            }
-            .webt-header__bottom {
             
-            }
-            .webt-bottom__nav {
-                max-width: 920px;
-                margin: 0 auto;
-                height: 48px;
-    
+            .header-wrapper__col {
                 display: flex;
-                align-items: stretch;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .header-wrapper__logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-decoration: none;
+                gap: 12px;
+            }
+            .header-logo__menu {
+                height: 25px;
+                width: 25px;
+            }
+            .header-logo__img {
+                max-width: 105px;
+                width: 100%;
+            }
+            
+            .header-wrapper__nav {
+                display: flex;
+                align-items: center;
                 justify-content: center;
+                gap: 40px;
+                margin-left: 32px;
+            }
+            .header-nav__item,
+            .header-actions__signin,
+            .header-actions__signin:focus {
+                font-family: NationalBold!important;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 12.8px;
+                color: #000000!important;
+            }
+            .header-nav__item:hover,
+            .header-actions__signin:hover {
+                text-decoration: underline;
+            }
+            
+            .header-wrapper__actions {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
                 gap: 16px;
             }
-            .webt-nav__link,
-            .webt-nav__link:focus,
-            .webt-nav__link:active {
-                position: relative;
-                white-space: nowrap;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-    
-                text-decoration: none;
-    
-                color: #000;
+            .header-actions__subscribe {
+                font-family: NationalBlack!important;
+                letter-spacing: 0.05rem;
                 text-transform: uppercase;
-                font-family: VogueAvantGarde!important;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: 0.127811em;
+                font-size: 14px;
+                font-weight: bold;
+                background-color: #f7623b;
+                color: #000000;
+                border: thin solid #f7623b;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                border-radius: 5px;
+                text-decoration: none;
+                width: 120px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
     
                 -webkit-transition: all .3s;
                 -moz-transition: all .3s;
@@ -261,159 +221,51 @@ a:visited,
                 -o-transition: all .3s;
                 transition: all .3s;
             }
-            .--active:after {
-                content: '';
-                background-color: rgb(31, 31, 31);
-                bottom: 0;
-                height: 4px;
-                position: absolute;
-                width: 100%;
-            }
-            .webt-nav__link:hover {
-                color: #000;
-                text-decoration: none;
-    
-                opacity: 0.8;
+            .header-actions__subscribe:hover {
+                background-color: #fff;
+                color: #000000;
             }
 
-            .webt-subheader {
-                width: 100%;
-                margin-bottom: 48px;
+            @media (max-width: 1200px) {
+                .webt-header__wrapper {
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
             }
-            .webt-subheader__head {
-                width: 100%;
-                height: 150px;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 16px;
-            }
-            .webt-head__title {
-                font-size: 64px;
-                font-family: FBDidotS!important;
-                letter-spacing: 0.0416667em;
-                font-weight: 300;
-                margin: 0 auto;
-                display: block;
-                color: rgb(0, 0, 0);
-            }
-            .webt-head__text {
-                text-align: center;
-                font-size: 17px;
-                font-family: GaramondPremierPro!important;
-                font-weight: 400;
-                margin: 0 auto;
-                display: block;
-                color: rgb(0, 0, 0);
-                max-width: 850px;
-            }
-            .webt-subheader__nav {
-                border-top: 1px solid rgb(224, 224, 224);
-                border-bottom: 1px solid rgb(224, 224, 224);
-            }
-            
             @media (max-width: 960px) {
-                .webt-bottom__nav {
+                .header-wrapper__nav {
                     display: none;
                 }
-                .webt-header__top {
-                    border-bottom: none;
-                }
-                .webt-head__text {
-                    padding-right: 12px;
-                    padding-left: 12px;
-                }
-                .webt-head__title {
-                    font-size: 48px;
-                }
-                .webt-subheader__head {
-                    height: 180px;
-                }
-                .webt-subheader__nav .webt-bottom__nav {
-                    display: flex;
-                }
             }
-            @media (max-width: 768px) {
-                .webt-top__actions {
-                    width: 32px;
-                    background-position: right;
-                    -webkit-background-size: cover;
-                    background-size: cover;
-                }
-                .webt-header__top {
-                    height: 54px;
-                }
-                .webt-top__wrapper {
-                    padding: 12px;
-                }
-                .webt-head__title {
-                    font-size: 32px;
-                }
-                .webt-subheader__head {
-                    height: auto;
-                    gap: 12px;
-                    padding: 24px 0;
-                }
-                .webt-head__text {
-                    font-size: 14px;
-                }
-                .webt-subheader__nav .webt-bottom__nav {
-                    flex-wrap: nowrap;
-                    white-space: nowrap;
-                    overflow-x: scroll;
-                    justify-content: flex-start;
-                    padding: 0 12px;
-                    height: 36px;
-                }
-                .webt-nav__link, .webt-nav__link:focus, .webt-nav__link:active {
-                    font-size: 12px;
+            @media (max-width: 375px) {
+                .header-actions__signin {
+                    display: none;
                 }
             }
         </style>
         <header class="webt-header">
-            <div class="webt-header__top">
-                <div class="webt-top__wrapper">
-                    <a href="#roulette" class="webt-top__menu">
-                        <svg class="ButtonIcon-iVrqPc hVlDJB button-icon icon icon-menu" focusable="false" viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M8 10h16v2H8v-2zm0 5h16v2H8v-2zm0 5h16v2H8v-2z" fill-rule="evenodd"></path></svg>
+            <div class="webt-header__wrapper">
+                <div class="header-wrapper__col">
+                    <a href="#form_section" class="header-wrapper__logo">
+                        <img src="images/icon-nav.png" alt="" class="header-logo__menu">
+                        <img src="images/logotype.svg" alt="" class="header-logo__img">
                     </a>
-                    <a href="#roulette" class="webt-top__logo">
-                        <img src="images/logo.svg" alt="" class="webt-logo__img">
-                    </a>
-                    <a href="#roulette" class="webt-top__actions"></a>
+                    <nav class="header-wrapper__nav">
+                        <a href="#form_section" class="header-nav__item">HEALTH</a>
+                        <a href="#form_section" class="header-nav__item">FITNESS</a>
+                        <a href="#form_section" class="header-nav__item">BEAUTY</a>
+                        <a href="#form_section" class="header-nav__item">LIFE</a>
+                        <a href="#form_section" class="header-nav__item">RELATIONSHIPS</a>
+                    </nav>
+                </div>
+                <div class="header-wrapper__col">
+                    <div class="header-wrapper__actions">
+                        <a href="#form_section" class="header-actions__subscribe">SUBSCRIBE</a>
+                        <a href="#form_section" class="header-actions__signin">SIGN IN</a>
+                    </div>
                 </div>
             </div>
-            <div class="webt-header__bottom">
-                <nav class="webt-bottom__nav">
-                    <a href="#roulette" class="webt-nav__link">MODA</a>
-                    <a href="#roulette" class="webt-nav__link">BELLEZZA</a>
-                    <a href="#roulette" class="webt-nav__link">ATTUALITÀ</a>
-                    <a href="#roulette" class="webt-nav__link">LIFESTYLE</a>
-                    <a href="#roulette" class="webt-nav__link">SFILATE</a>
-                    <a href="#roulette" class="webt-nav__link">PHOTOVOGUE</a>
-                    <a href="#roulette" class="webt-nav__link">VOGUE SHOP</a>
-                    <a href="#roulette" class="webt-nav__link">VIDEO</a>
-                </nav>
-            </div>
         </header>
-        <div class="webt-subheader">
-            <div class="webt-subheader__head">
-                <h2 class="webt-head__title">Viso & Corpo</h2>
-            </div>
-            <div class="webt-subheader__nav">
-                <nav class="webt-bottom__nav">
-                    <a href="#roulette" class="webt-nav__link">ALL</a>
-                    <a href="#roulette" class="webt-nav__link">TRUCCO</a>
-                    <a href="#roulette" class="webt-nav__link">CAPELLI</a>
-                    <a href="#roulette" class="webt-nav__link">UNGHIE</a>
-                    <a href="#roulette" class="webt-nav__link">NEWS</a>
-                    <a href="#roulette" class="webt-nav__link">WELLNESS & FITNESS</a>
-                    <a href="#roulette" class="webt-nav__link --active">VISO & CORPO</a>
-                    <a href="#roulette" class="webt-nav__link">SPOSA</a>
-                </nav>
-            </div>
-        </div>
         <!-- // Header -->
         
         <div id="content" class="site-content fixed main-content-font">
@@ -474,302 +326,12 @@ a:visited,
                                 <h3 style="text-align:center;display: block; margin: 0.5em 0px; line-height: 1.2; font-weight: bold; text-transform: uppercase;font-size: 18px;">
                                     IN ESCLUSIVA PER I NOSTRI LETTORI, PUBBLICHIAMO IL MODULO D'ORDINE UFFICIALE DI SWISSDENT
                                 </h3>
-                                <center>
-                                    <div class="ruletka-p" id="roulette">
-                                        <h2>AVVERTIMENTO! Attenzione ai falsi!</h2>
-                                        <p>La merce scontata del 50% in Italia può essere ottenuta solo
-                                            <a href="#roulette" class="ruletka-a">compilando il modulo d'ordine ufficiale</a></p>
-                                    </div>
-                                    <div class="card spin-wrapper" id="bags__sales" style="display:none">
-                                        <div class="card__instructions">
-                                            <h1>Intente abrir 3 imágenes iguales y recibirá Su descuento</h1>
-                                            <p class="card__counter" style="font-size: 15px; margin-top: 20px;">Quedan intentos: <b class="counter_attempts">5</b></p>
-                                        </div>
-                                        <div class="card__container">
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                    <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                            <div class="card__item">
-                                                <!-- cover -->
-                                                <span class="card__item__cover">
-                                                <img src="images/gift.png" alt>
-                                                </span>
-                                                <!-- reload -->
-                                                <span class="card__item__reload">
-                                                    <!-- <svg>
-                                                        <use xlink:href="/assets_page/7a27e518b0be659ed738b6ffabc450619860de2a/images/gift.svg">
-                                                        </use>
-                                                    </svg> -->
-                                                </span>
-                                                <!-- sale -->
-                                                <span class="card__item__sale ">
-                                                    <p class="card__item__sale-100">50%</p>
-                                                    <p class="card__item__sale-50">25%</p>
-                                                    <p class="card__item__sale-30">10%</p>
-                                                    <img src="images/discount.png" alt>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order_block" style="display:block">
-                                        <div><img src="images/prod.png"></div>
-                                        <p class="price"> 
-                                            <br>
-                                            <del style="font-size:22px;">98 &euro;</del>
-                
-                                            <span class="price_red" style="font-size: 30px;
-                                            color: red;
-                                            margin-left: 15px;
-                                            font-weight: 700;">49 &euro;</span>
-                                    </p>
-                                        <h3>Tutto ciò che dovete fare è inserire il vostro nome e numero di telefono.<br/>
-                                            Sbrigatevi! Il tempo rimasto:<br><span class="time_remains" id="min">30</span> : <span class="time_remains" id="sec">00</span></h3>
-                                        <!-----------------------  --------------------------->
-                                        <form class="main-order-form" id="order_form" geo="it" action="api.php" method="post" 
-	onsubmit="return validate_form(this, 'Si prega di inserire un numero di telefono valido');">
-										
-<input name="subid" type="hidden" value="{subid}">
-<input name="px" type="hidden" value="{px}">
-<input name="bayer" type="hidden" value="{bayer}">
-										
-                                            <div class="input-group tooltip-hide">
-                                                <input type="text" class="input-roulette" name="name" id="input-name" 
-												placeholder="Nome" required>
-                                            </div>
-                                            <div class="input-group tooltip-hide">
-                                                <input type="tel" class="input-roulette" name="phone" id="input-phone" 
-												placeholder="Telefono (cellulare attivo)" required>
-                                            </div>                                        
-                                            <button class="submit-roulette" style="width: 250px;">ORDINA</button>
-											</form>
-                                        <!-----------------------  --------------------------->
-                                    </div>
-                                    <div class="spin-result-wrapper">
-                                        <div class="pop-up-window">
-                                            <div class="close-popup"></div>
-                                            <p class="ruletka-p pop-up-text">Pueden llevarse Shiny Dentes con un 
-											<span class="danger-text">descuento de 50%.</span></p>
-                                            <a class="pop-up-button" href="#roulette">OK</a>
-                                        </div>
-                                    </div>
-                                </center>
+    
+    
+                                
+                                
+                                
+                                
                                 <br>
                                 <div class="thumbs-rating-container" id="thumbs-rating-58" data-content-id="58" style="display:none;">
                                     <button class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(58, 1);">Podoba mi się +476
@@ -786,507 +348,7 @@ a:visited,
                             </div>
                         </article>
     
-                        <style>
-                            .vk-container {
-                                font-family: sans-serif!important;
-                                font-size: 15px;
-                                color: #000;
-                                text-decoration: none
-                            }
-    
-                            .vk-header {
-                                background: #dae2e8 none repeat scroll 0 0;
-                                padding: 4px 4px 4px 6px;
-                                margin-bottom: 10px
-                            }
-                            .comment-count {
-                                font-family: sans-serif!important;
-                            }
-                            .vk-logo {
-                                background: transparent none no-repeat scroll 0 0;
-                                width: 16px;
-                                height: 16px;
-                                float: right;
-                                margin-top: -1px
-                            }
-    
-                            .vk-header-text {
-                                padding: 2px 3px 1px;
-                                line-height: 100%;
-                                color: #45688e;
-                                font-weight: 700
-                            }
-    
-                            .vk-avatar img {
-                                float: left;
-                                margin-right: 10px
-                            }
-    
-                            .vk-comment,.vk-comment-load {
-                                margin-bottom: 15px;
-                                position: relative;
-                                border-bottom: 1px solid #dae1e8;
-                                padding-bottom: 15px
-                            }
-    
-                            .vk-comment:last-child {
-                                border-bottom: 0
-                            }
-    
-                            .vk-comment-name {
-                                color: #2b587a;
-                                font-weight: 700;
-                                font-size: 12px
-                            }
-    
-                            .vk-comment-text {
-                                margin-left: 60px
-                            }
-    
-                            .vk-comment-date {
-                                margin-left: 60px;
-                                color: #999
-                            }
-                            .comment {
-                                border-bottom: 1px solid #dae1e8!important;
-                                padding-bottom: 15px!important;
-                                margin-bottom: 15px!important;
-                            }
-
-                            .comment .avatar {
-                                border-radius: 100%;
-                                width: 48px;
-                                height: 48px;
-                                margin-right: 10px;
-                                display: inline-block;
-                                vertical-align: top;
-                            }
-
-                            .comm_text {
-                                position: relative;
-                                background-color: #bfbfbf26;
-                                border-radius: 7px;
-                                display: inline-block;
-                                vertical-align: top;
-                                width: -webkit-calc(100% - 65px);
-                                width: -moz-calc(100% - 65px);
-                                width: calc(100% - 65px)
-                            }
-
-                            .comm_text .user_name {
-                                color: rgb(36, 36, 36);
-                                font-weight: 600;
-                                font-size: 13px!important;
-                                margin-bottom: 0!important;
-                                padding: 0 10px!important;
-                                font-family: sans-serif!important;
-                            }
-
-                            .comm_text .text {
-                                font-size: 15px!important;
-                                padding: 0 10px!important;
-                                font-family: sans-serif!important;
-                                margin-bottom: 24px!important;
-                            }
-
-                            .comm_text img {
-                                margin-bottom: 10px;
-                                margin-left: 10px;
-                            }
-
-                            .comm_text .time {
-                                color: #999;
-                                margin-bottom: 0
-                            }
-
-                            .comments {
-                                padding-left: 2px;
-                                padding-right: 2px;
-                            }
-                            .down-menu {
-                                display: flex;
-                                margin-left: 60px;
-                                margin-top: 5px;
-                            }
-
-                            .down-menu p {
-                                cursor: pointer;
-                                color: rgb(119, 119, 119);
-                                font-weight: 600;
-                                font-size: 12px!important;
-                                margin: 0!important;
-                                margin-bottom: 16px!important;
-                                padding: 0!important;
-                                font-family: sans-serif!important;
-                                max-width: 80px;
-                            }
-                            .down-menu p.time {
-                                white-space: nowrap;
-                            }
-                            .emodji {
-                                cursor: pointer;
-                                display: flex;
-                                align-items: center;
-                                gap: 1px;
-                                box-shadow: -3px 2px 5px rgb(133, 133, 133);
-                                border-radius: 15px;
-                                position: absolute;
-                                background-color: white;
-                                right: 10px;
-                                bottom: -5px;
-                                padding: 2px 0;
-                                padding-right: 5px;
-                                color: #999;
-                            }
-
-                            .emodji img {
-                                margin: 0;
-                            }
-                            .knopka,
-                            .knopka:hover,
-                            .knopka:focus {
-                                padding: 20px;
-                                background-color: black;
-                                font-size: 30px;
-                                color: #fff;
-                                border-radius: 50px;
-                                width: 100%;
-                                text-align: center;
-                                border: none;
-                                display: block;
-                                max-width: 400px;
-                                margin: 0 auto;
-                                text-decoration: none;
-                            }
-                            @media (max-width: 768px) {
-                                .knopka, .knopka:hover, .knopka:focus {
-                                    padding: 16px;
-                                    font-size: 21px;
-        
-                                }
-                            }
-                            @media (max-width: 475px) {
-                                .down-menu {
-                                    white-space: nowrap;
-                                    justify-content: flex-start;
-                                    flex-wrap: nowrap;
-                                    overflow-x: scroll;
-                                }
-                            }
-                        </style>
-                        <div class="vk-container" style="float: none">
-                            <div class="vk-header">
-                                <div class="vk-logo"></div>
-                                <div class="vk-header-text"><span class="comment-count">194 comentarios desde hoy</span></div>
-                            </div>
-                            <div class="vk-container">
-                                <div class="vk-container">
-                                    <div class="comments">
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-1.jpg">
-                                            <div class="comm_text">
-                                                <div class="emodji">
-                                                    <img src="./images/like.png" alt="">
-                                                    4
-                                                </div>
-                                                <p class="user_name">Javier Fernández</p>
-                                                <p class="text">¡Comprar estas carillas ha sido mi mejor inversión "en mí mismo"! Las compré en oferta, no esperaba mucho, pero me equivoqué. La calidad es excelente, en la boca no estorban, te acostumbras muy rápidamente, son fáciles de colocar. Sin duda las recomiendo.</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-2.jpg">
-                                            <div class="comm_text">
-                                                <div class="emodji">
-                                                    <img src="./images/like.png" alt="">
-                                                    <img src="./images/heart.png" alt="">
-                                                </div>
-                                                <p class="user_name">Carmen Navarro</p>
-                                                <p class="text">En mi opinión, las carillas SwissDent son lo mejor que se ha inventado en odontología. No duele, no da miedo y tendrás de una vez unos dientes perfectos.</p>
-                                                <img src="images/comments/com-2-1.jpg" style="max-width: 230px;">
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-3.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Rafael Alonso</p>
-                                                <p class="text">¿Quien encargó estas mismas carillas comparte sus experiencias? Porque yo las encargaba chinas y era una pesadilla...</p>
                         
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-4.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Antonia Moralez</p>
-                                                <p class="text">Rafael, las he estado usando durante tres meses, son muy buenas, no son chinas ... Muy finas, no se oscurecen, se puede beber café y vino, en la boca no se notan en absoluto. Quedan muy naturales, todos mis amigos piensan que llevo cerámica. Definitivamente las recomiendo, ¡especialmente ahora!</p>
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-5.jpg">
-                                            <div class="comm_text">
-                                                <div class="emodji">
-                                                    <img src="./images/like.png" alt="">
-                                                    3
-                                                </div>
-                                                <p class="user_name">Ana Suarez</p>
-                                                <p class="text">¡Merece la pena para todos los que no están contentos con sus dientes! Tengo el esmalte muy oscuro y no puedo blanquearlo, ya que además es muy fino. Pensé en ponerme carillas de cerámica, pero eso arruinaría mis dientes. Estudié mucho para ver cuál podía ser la alternativa y elegí SwissDent y nunca me he arrepentido.</p>
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-6.jpg">
-                                            <div class="comm_text">
-                                                <div class="emodji">
-                                                    <img src="./images/like.png" alt="">
-                                                    <img src="./images/heart.png" alt="">
-                                                </div>
-                                                <p class="user_name">Alejandro Blanco</p>
-                                                <p class="text">Trabajo en un concesionario de coches y la sonrisa lo es todo para mí. Pero sufro de fluorosis, ya que pasé mi infancia en la ciudad donde el agua está saturada de flúor. Fui al médico para blanquearme los dientes, pero me lo desaconsejaron, diciendo que las manchas seguirían siendo visibles. Empecé a pensar en ponerme carillas, pero el precio es horrible, yo no gano tanto. Decidí probar las carillas removibles. Elegí SwissDent y no me equivoqué. Se ajustan perfectamente, la calidad es excelente. ¡Quedan genial!</p>
-                                                <img src="images/comments/com-6-1.jpg" style="max-width: 230px;">
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-7.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Dolores Molina</p>
-                                                <p class="text">Yo también trabajo con personas. Intento ir al dentista con regularidad, hacerme blanqueamientos y limpiezas dentales. Y hace poco noté que mis dientes se volvieron sensibles, mi médico me dijo que no debía blanquearme más los dientes y me recomendó SwissDent como alternativa. Dudé, pensé que sería muy incómodo y que cambiaría la dicción. Después de todo, decidí probarlo porque el precio es incluso inferior al de una limpieza normal. Todos mis temores resultaron infundados. Son muy finas, por lo que ni siquiera se notan, pero son muy duraderas, mi dicción no cambia, no se oscurecen con el tiempo, ni siquiera con el café o los cigarrillos. Se ajustan perfectamente, por lo que puedo llevarlas todo el día y comer con ellas puestas. Los materiales son de alta calidad. Son fáciles de cuidar. Así que estoy muy contenta con mi compra.</p>
-                        
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-8.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Manuela Rubio</p>
-                                                <p class="text">Hacía tiempo que quería mejorar estéticamente mi sonrisa. Mis dientes superiores eran feos, con empastes, que con el tiempo se oscurecen y dañan el aspecto de los dientes. En fin, últimamente me avergonzaba de sonreír y me propuse ahorrar dinero para tener unos dientes bonitos a toda costa, ya que todo es muy caro. He comprado SwissDent mientras ahorraba y estoy muy contenta con ellas. Ahora puedo sonreír sin timidez.</p>
-                                                <img src="images/comments/com-8-1.jpg" style="max-width: 230px;">
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-9.jpg">
-                                            <div class="comm_text">
-                            
-                                                <p class="user_name">Victoria Santos</p>
-                                                <p class="text">¿Podéis decirme si se adaptan a todo el mundo? ¿Cuánto tarda la entrega?</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
-                                            </div>
-                                        </div>
-                                        <div class="comment" style="margin-left: 20px;">
-                                            <img class="avatar" src="images/comments/com-10.jpg">
-                                            <div class="comm_text">
-                                                <div class="emodji">
-                                                    <img src="./images/like.png" alt="">
-                                                    5
-                                                </div>
-                                                <p class="user_name">Júlia Garrido</p>
-                                                <p class="text">Victoria, las tallas de SwissDent son universales. Una entrega de 1 a 3 días laborables, pagas al mensajero cuando las recibas.</p>
-                        
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment" style="margin-left: 40px;">
-                                            <img class="avatar" src="images/comments/com-9.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Victoria Santos</p>
-                                                <p class="text">Júlia, es decir ¿puedo hacer un pedido para mi y para mi marido?</p>
-                        
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment" style="margin-left: 60px;">
-                                            <img class="avatar" src="images/comments/com-10.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Júlia Garrido</p>
-                                                <p class="text">Victoria, sí, yo hice esto mismo.</p>
-                        
-                        
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-11.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Verónica Cortés</p>
-                                                <p class="text">Recibí mis carillas hace una semana. Mis dientes no están rectos y no quiero ponerme aparato, pero tampoco quiero ir por ahí con ellos porque son horrorosos. ¡Ahora tengo una sonrisa como una estrella! Suave y blanca. No he tenido ningún problema y mi sonrisa es maravillosa).</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-12.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Patricia León</p>
-                                                <p class="text">También encargué las carillas. La entrega fue muy rápida, tardó solo 2 días. ¡No te puedes ni imaginar lo agradable que es tener una sonrisa de Hollywood!</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-13.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Andres Calvo</p>
-                                                <p class="text">Pedí las carillas y me las entregarán mañana. Tengo algunos dientes delanteros astillados y mi asesor dijo que cubrirán mis imperfecciones.</p>
-                                                <img src="images/comments/com-13-1.jpg" style="max-width: 230px;">
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment" style="margin-left: 20px;">
-                                            <img class="avatar" src="images/comments/com-14.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Mercedes Herrera</p>
-                                                <p class="text">Andres, ¿podrías escribir cómo te resultan? Tengo la misma situación, me gustaría probarlas, ¡pero tengo miedo!</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment" style="margin-left: 40px;">
-                                            <img class="avatar" src="images/comments/com-13.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Andres Calvo</p>
-                                                <p class="text">Mercedes, aquí tienes. Estoy muy satisfecho. ¡No tengas miedo de pedirlas!</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-15.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Teresa Márques</p>
-                                                <p class="text">Chicas, no perdáis tiempo en tonterías. 10 veces que he hecho el blanqueo y todo lo que he podido y nada funcionaba. ¡Más de un año llevo estas carillas y he recibido muchos cumplidos. Yo misma estoy contentísima!</p>
-                                                <img src="images/comments/com-15-1.jpg" style="max-width: 230px;">
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-16.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Irene Vega</p>
-                                                <p class="text">Mi suegra compró estas carillas. Son geniales. Tiene una verdadera sonrisa de Hollywood. Incluso parece más joven. Yo también las he pedido para mí.</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <div class="comment">
-                                            <img class="avatar" src="images/comments/com-17.jpg">
-                                            <div class="comm_text">
-                                                <p class="user_name">Alba Lozano</p>
-                                                <p class="text">Mis dientes son como de verdad, los llevo desde hace 4 meses y no cambian su color y forma, y eso que mis dientes son horribles, tengo un hueco entre los dientes, y algunas manchas, y un diente que sobresale por delante. Mi madre siempre me ha dicho que soy una chica muy guapa, pero mis dientes necesitan corrección, pero no tengo dinero y me dan miedo los dentistas. He pedido SwissDent. ¡En fin, creo que unos dientes bonitos cambian a cualquiera!</p>
-                                            </div>
-                                            <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <a class="knopka" href="#form_section" style="display:block; max-width:400px; margin:0 auto">PEDIR <br>SWISSDENT</a>
-                                        <br>&nbsp;<br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         
                         
                     </main>
@@ -1298,7 +360,7 @@ a:visited,
                             <div class="widget-articles">
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1234.jpg" type="image/jpg">
                                                 <img alt="img" width="335" height="220" src="images/1234.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded">
@@ -1307,7 +369,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Pensioni, maxi rivalutazione ma non per tutti. Ecco come si adeguano gli assegni all'inflazione</a>
+                                            <a href="#form_section" class="scrollto">Pensioni, maxi rivalutazione ma non per tutti. Ecco come si adeguano gli assegni all'inflazione</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">23</span>
@@ -1316,7 +378,7 @@ a:visited,
                                 </article>
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1235.jpg" type="image/png">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/1235.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="27">
@@ -1325,7 +387,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Auto, la Ue lancia i nuovi standard Euro 7: colpiti motori diesel e mezzi pesanti</a>
+                                            <a href="#form_section" class="scrollto">Auto, la Ue lancia i nuovi standard Euro 7: colpiti motori diesel e mezzi pesanti</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">4</span>
@@ -1334,7 +396,7 @@ a:visited,
                                 </article>
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1236.jpg" type="image/jpg">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/1236.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="28">
@@ -1343,7 +405,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Com'è fatta e a cosa serve la fotocamera digitale più grande del mondo</a>
+                                            <a href="#form_section" class="scrollto">Com'è fatta e a cosa serve la fotocamera digitale più grande del mondo</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">51</span>
@@ -1352,7 +414,7 @@ a:visited,
                                 </article>
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1237.jpg" type="image/png">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/1237.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="29">
@@ -1361,7 +423,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Sassi e sabbia lanciati contro l'avversario: la spettacolare lite tra polpi</a>
+                                            <a href="#form_section" class="scrollto">Sassi e sabbia lanciati contro l'avversario: la spettacolare lite tra polpi</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">13</span>
@@ -1376,6 +438,1006 @@ a:visited,
                     </div>
                 </aside>
             </div>
+    
+            <style>
+                /* Form */
+                .form {
+                    font-family: -apple-system,BlinkMacSystemFont,Arial,sans-serif!important;
+                    margin-bottom: 48px;
+                }
+                .form-wrapper {
+                    background-color: #fff;
+                    padding: 16px 20px;
+                    margin-top: 16px;
+                    overflow: hidden;
+            
+                    border: 1px solid #eee;
+                }
+                .form-wrapper__headline {
+            
+                }
+                .form-headline__title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 61px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    display: block;
+                    color: #FF9900;
+                    font-family: NationalBold!important;
+                }
+                .form-headline__subtitle {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 36px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    display: block;
+                    color: #232323;
+                    font-family: NationalBold!important;
+                }
+        
+                .form-wrapper__countdown {
+                    margin-top: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 12px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .form-countdown__item {
+                    text-align: center;
+                }
+                .countdown-item__value {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 50px;
+                    line-height: 61px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    display: block;
+                    color: #000000;
+                    font-family: Arial, sans-serif!important;
+                }
+                .countdown-item__title {
+                    border-top: 1px solid #ACACAC;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    display: block;
+                    color: #000000;
+                    padding-top: 4px;
+                    font-family: Arial, sans-serif!important;
+                }
+        
+                .form-wrapper__content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-top: 100px;
+                    position: relative;
+                }
+                .form-content__features {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding-bottom: 48px;
+                }
+                .form-features__item {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 25px;
+                    line-height: 30px;
+                    position: relative;
+                    color: #000000;
+                    padding-left: 48px;
+                    max-width: 500px;
+                    font-family: Arial, sans-serif!important;
+                }
+                .form-features__item:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 36px;
+                    height: 36px;
+                    background-image: url(images/icon-form-feature.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    -webkit-background-size: contain;
+                    background-size: contain;
+                    left: 0;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+                .form-content__image {
+                    width: 450px;
+                    height: 360px;
+                    position: absolute;
+                    right: -32px;
+                    object-fit: contain;
+                }
+        
+                .form-wrapper__box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    gap: 8px;
+                    margin-top: 8px;
+                }
+                .form-box__input {
+                    width: 100%;
+                    max-width: 320px;
+                    height: 62px;
+                    font-family: Arial, sans-serif!important;
+            
+                    background: #FFFFFF;
+                    border: 1px solid #D6D6D6;
+            
+                    -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    -ms-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    -o-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    border-radius: 5px;
+                    padding: 12px;
+                    font-size: 18px;
+                }
+                .form-box__submit {
+                    width: 100%;
+                    max-width: 460px;
+                    height: 62px;
+                    background: linear-gradient(180deg, #FF9900 0%, #E28902 100%);
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    border: none;
+                }
+                .form-submit__text {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #FFFFFF;
+                    font-family: NationalBold!important;
+                }
+        
+                .form-wrapper__price {
+                    max-width: 290px;
+                    width: 100%;
+                    margin: 32px auto 0 auto;
+                }
+                .form-price__old {
+                    height: 88px;
+                    width: 100%;
+                    background-image: url(images/form-price-old-bg.svg);
+                    background-repeat: no-repeat;
+                    -webkit-background-size: contain;
+                    background-size: contain;
+                    background-position: center;
+            
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 61px;
+                    position: relative;
+                    padding-top: 12px;
+                    padding-left: 12px;
+                }
+                .form-price__old span {
+                    color: #DA1111;
+                    position: relative;
+                    font-family: Arial, sans-serif!important;
+                }
+                .form-price__old span b {
+                    font-size: 30px;
+                    font-family: Arial, sans-serif!important;
+                }
+                .form-price__old span:before {
+                    content: "";
+                    border-bottom: 5px solid black;
+                    position: absolute;
+                    width: 100%;
+                    height: 50%;
+                    transform: rotate(9deg);
+                    left: 2px;
+                    top: -2px;
+                }
+                .form-price__new {
+                    width: 100%;
+                    height: 202px;
+                    background-image: url(images/form-price-new-bg.svg);
+                    background-repeat: no-repeat;
+                    -webkit-background-size: contain;
+                    background-size: contain;
+                    background-position: center;
+                    text-align: center;
+                    padding: 20px 0;
+                    margin-top: -30px;
+                }
+                .price-new__text {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-family: Arial, sans-serif!important;
+                    font-size: 50px;
+                    line-height: 61px;
+                    padding-top: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-position: center;
+                    color: #000000;
+                    width: 100%;
+                    max-width: calc(100% - 40px);
+                    margin: 0 auto;
+                    height: 109px;
+                    background-image: url(images/form-price-new-inner-bg.svg);
+                    background-repeat: no-repeat;
+                    -webkit-background-size: contain;
+                    background-size: contain;
+                }
+                .price-new__discount {
+                    margin-top: 6px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 61px;
+                    font-family: Arial, sans-serif!important;
+                    color: #FFFFFF;
+                }
+                .--form-price-mobile {
+                    display: none;
+                }
+        
+                @media (max-width: 1080px) {
+                    .form-content__image {
+                        max-width: 390px;
+                    }
+                }
+        
+                @media (max-width: 960px) {
+                    .form-wrapper__content {
+                        flex-direction: column;
+                        margin: 32px auto 0 auto;
+                        align-items: center;
+                        justify-content: flex-start;
+                    }
+                    .form-wrapper__box {
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .form-box__submit,
+                    .form-box__input {
+                        max-width: 460px;
+                    }
+                    .form-submit__text {
+                        font-size: 18px;
+                    }
+                    .form-content__image {
+                        display: none;
+                    }
+                    .form-wrapper__content:before,
+                    .form-wrapper__content:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        background-repeat: no-repeat;
+                        -webkit-background-size: contain;
+                        background-size: contain;
+                        background-position: center;
+                        z-index: 2;
+                        pointer-events: none;
+                    }
+                    .form-wrapper__content:before {
+                        bottom: 300px;
+                        background-image: url(images/prod.png);
+                        max-width: 340px;
+                        width: 100%;
+                        height: 295px;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        -moz-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        -o-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                    }
+                    .form-wrapper__content:after {
+                        bottom: 450px;
+                        right: -32px;
+                        background-image: url(images/form-image-hand.png);
+                        width: 400px;
+                        height: 350px;
+                
+                    }
+                    .form-wrapper__countdown {
+                        margin-top: 24px;
+                    }
+                    .form-wrapper__price {
+                        display: none;
+                    }
+                    .--form-price-mobile {
+                        display: block;
+                        margin-top: 500px;
+                        margin-bottom: 24px;
+                    }
+            
+            
+                }
+        
+                @media (max-width: 575px) {
+                    .form-content__image {
+                        width: 100%;
+                        max-width: 380px;
+                        height: auto;
+                    }
+                    .countdown-item__value,
+                    .form-headline__title {
+                        font-size: 42px;
+                        line-height: 48px;
+                    }
+                    .countdown-item__title {
+                        font-size: 16px;
+                    }
+                    .form-features__item {
+                        font-size: 21px;
+                        padding-left: 36px;
+                        line-height: 26px;
+                    }
+                    .form-features__item:before {
+                        width: 28px;
+                        height: 28px;
+                    }
+                    .form-wrapper__content:after {
+                        width: 320px;
+                        bottom: 480px;
+                    }
+                    .form-wrapper__content:before {
+                        max-width: 280px;
+                    }
+                }
+        
+                @media (max-width: 375px) {
+                    .form-price__old,
+                    .price-new__text,
+                    .price-new__discount {
+                        font-size: 42px;
+                    }
+                    .price-new__discount {
+                        margin-top: -6px;
+                    }
+                    .form-wrapper__content:after {
+                        width: 280px;
+                        bottom: 480px;
+                    }
+                }
+        
+                @media (max-width: 340px) {
+                    .form-price__new {
+                        margin-top: -40px;
+                    }
+                }
+            </style>
+            <section class="form" id="form_section">
+                <div class="theme-wrapper form-wrapper">
+                    <div class="form-wrapper__headline">
+                        <span class="form-headline__title">OFFERTA VANTAGGIOSA</span>
+                        <span class="form-headline__subtitle">FINO ALLA FINE DELLA PROMOZIONE</span>
+                    </div>
+                    <div class="form-wrapper__countdown js-countdown">
+                        <div class="form-countdown__item">
+                            <span class="countdown-item__value js-countdown__days">00</span>
+                            <span class="countdown-item__title">Giorni</span>
+                        </div>
+                        <div class="form-countdown__item">
+                            <span class="countdown-item__value js-countdown__hours">00</span>
+                            <span class="countdown-item__title">Ore</span>
+                        </div>
+                        <div class="form-countdown__item">
+                            <span class="countdown-item__value js-countdown__minutes">40</span>
+                            <span class="countdown-item__title">Minuti</span>
+                        </div>
+                        <div class="form-countdown__item">
+                            <span class="countdown-item__value js-countdown__seconds">00</span>
+                            <span class="countdown-item__title">Secondi</span>
+                        </div>
+                    </div>
+            
+                    <div class="form-wrapper__content">
+                        <div class="form-content__features">
+                            <div class="form-features__item">Qualità svizzera</div>
+                            <div class="form-features__item">Consegna in 2-3 giorni</div>
+                            <div class="form-features__item">Sconto del 50% nell'ambito della promozione in corso</div>
+                        </div>
+                        <div class="form-wrapper__price --form-price-mobile">
+                            <div class="form-price__old">
+                                <span>98.00<b>€</b></span>
+                            </div>
+                            <div class="form-price__new">
+                                <div class="price-new__text">49.00€</div>
+                                <div class="price-new__discount">-50%</div>
+                            </div>
+                        </div>
+                        <img src="images/form-image.png" alt="" class="form-content__image" pinger-seen="true">
+                    </div>
+            
+                    <form class="form-wrapper__box" geo="it" action="api.php" method="post" onsubmit="return validate_form(this, 'Si prega di inserire un numero di telefono valido');">
+                        <input name="subid" type="hidden" value="{subid}">
+                        <input name="px" type="hidden" value="{px}">
+                        <input name="bayer" type="hidden" value="{bayer}">
+                        <input required="" type="text" name="name" id="form_name" class="form-box__input" placeholder="Nome">
+                        <input required="" type="tel" name="phone" id="form_tel" class="form-box__input" placeholder="Telefono (cellulare attivo)">
+                        <button type="submit" class="form-box__submit">
+                            <span class="form-submit__text">Clicca per ottenere un nuovo sorriso!</span>
+                        </button>
+                    </form>
+            
+                    <div class="form-wrapper__price">
+                        <div class="form-price__old">
+                            <span>98.00<b>€</b></span>
+                        </div>
+                        <div class="form-price__new">
+                            <div class="price-new__text">49.00€</div>
+                            <div class="price-new__discount">-50%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <script type="text/javascript">
+                /** Countdown **/
+                (() => {
+                    let sec         = 2400,
+                      countDiv    = document.querySelector(".js-countdown"),
+                      countDown   = setInterval(function () {
+                          secpass();
+                      }, 1000);
+        
+                    function secpass() {
+                        let min     = Math.floor(sec / 60),
+                          remSec  = sec % 60;
+            
+                        if (remSec < 10) {
+                            remSec = '0' + remSec;
+                        }
+                        if (min < 10) {
+                            min = '0' + min;
+                        }
+            
+                        document.querySelector('.js-countdown__minutes').innerHTML = min;
+                        document.querySelector('.js-countdown__seconds').innerHTML = remSec;
+            
+                        if (sec > 0) {
+                            sec = sec - 1;
+                        } else {
+                            clearInterval(countDown);
+                            countDiv.innerHTML = '';
+                        }
+                    }
+                })();
+            </script>
+            
+            <style>
+                .vk-container {
+                    font-family: sans-serif!important;
+                    font-size: 15px;
+                    color: #000;
+                    text-decoration: none
+                }
+        
+                .vk-header {
+                    background: #dae2e8 none repeat scroll 0 0;
+                    padding: 4px 4px 4px 6px;
+                    margin-bottom: 10px
+                }
+                .comment-count {
+                    font-family: sans-serif!important;
+                }
+                .vk-logo {
+                    background: transparent none no-repeat scroll 0 0;
+                    width: 16px;
+                    height: 16px;
+                    float: right;
+                    margin-top: -1px
+                }
+        
+                .vk-header-text {
+                    padding: 2px 3px 1px;
+                    line-height: 100%;
+                    color: #45688e;
+                    font-weight: 700
+                }
+        
+                .vk-avatar img {
+                    float: left;
+                    margin-right: 10px
+                }
+        
+                .vk-comment,.vk-comment-load {
+                    margin-bottom: 15px;
+                    position: relative;
+                    border-bottom: 1px solid #dae1e8;
+                    padding-bottom: 15px
+                }
+        
+                .vk-comment:last-child {
+                    border-bottom: 0
+                }
+        
+                .vk-comment-name {
+                    color: #2b587a;
+                    font-weight: 700;
+                    font-size: 12px
+                }
+        
+                .vk-comment-text {
+                    margin-left: 60px
+                }
+        
+                .vk-comment-date {
+                    margin-left: 60px;
+                    color: #999
+                }
+                .comment {
+                    border-bottom: 1px solid #dae1e8!important;
+                    padding-bottom: 15px!important;
+                    margin-bottom: 15px!important;
+                }
+        
+                .comment .avatar {
+                    border-radius: 100%;
+                    width: 48px;
+                    height: 48px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+        
+                .comm_text {
+                    position: relative;
+                    background-color: #bfbfbf26;
+                    border-radius: 7px;
+                    display: inline-block;
+                    vertical-align: top;
+                    width: -webkit-calc(100% - 65px);
+                    width: -moz-calc(100% - 65px);
+                    width: calc(100% - 65px)
+                }
+        
+                .comm_text .user_name {
+                    color: rgb(36, 36, 36);
+                    font-weight: 600;
+                    font-size: 13px!important;
+                    margin-bottom: 0!important;
+                    padding: 0 10px!important;
+                    font-family: sans-serif!important;
+                }
+        
+                .comm_text .text {
+                    font-size: 15px!important;
+                    padding: 0 10px!important;
+                    font-family: sans-serif!important;
+                    margin-bottom: 24px!important;
+                }
+        
+                .comm_text img {
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                }
+        
+                .comm_text .time {
+                    color: #999;
+                    margin-bottom: 0
+                }
+        
+                .comments {
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
+                .down-menu {
+                    display: flex;
+                    margin-left: 60px;
+                    margin-top: 5px;
+                }
+        
+                .down-menu p {
+                    cursor: pointer;
+                    color: rgb(119, 119, 119);
+                    font-weight: 600;
+                    font-size: 12px!important;
+                    margin: 0!important;
+                    margin-bottom: 16px!important;
+                    padding: 0!important;
+                    font-family: sans-serif!important;
+                    max-width: 80px;
+                }
+                .down-menu p.time {
+                    white-space: nowrap;
+                }
+                .emodji {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 1px;
+                    box-shadow: -3px 2px 5px rgb(133, 133, 133);
+                    border-radius: 15px;
+                    position: absolute;
+                    background-color: white;
+                    right: 10px;
+                    bottom: -5px;
+                    padding: 2px 0;
+                    padding-right: 5px;
+                    color: #999;
+                }
+        
+                .emodji img {
+                    margin: 0;
+                }
+                .knopka,
+                .knopka:hover,
+                .knopka:focus {
+                    padding: 20px;
+                    background-color: black;
+                    font-size: 30px;
+                    color: #fff;
+                    border-radius: 50px;
+                    width: 100%;
+                    text-align: center;
+                    border: none;
+                    display: block;
+                    max-width: 400px;
+                    margin: 0 auto;
+                    text-decoration: none;
+                }
+                @media (max-width: 768px) {
+                    .knopka, .knopka:hover, .knopka:focus {
+                        padding: 16px;
+                        font-size: 21px;
+                
+                    }
+                }
+                @media (max-width: 475px) {
+                    .down-menu {
+                        white-space: nowrap;
+                        justify-content: flex-start;
+                        flex-wrap: nowrap;
+                        overflow-x: scroll;
+                    }
+                }
+            </style>
+            <div class="vk-container" style="float: none">
+                <div class="vk-header">
+                    <div class="vk-logo"></div>
+                    <div class="vk-header-text"><span class="comment-count">194 comentarios desde hoy</span></div>
+                </div>
+                <div class="vk-container">
+                    <div class="vk-container">
+                        <div class="comments">
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-1.jpg">
+                                <div class="comm_text">
+                                    <div class="emodji">
+                                        <img src="./images/like.png" alt="">
+                                        4
+                                    </div>
+                                    <p class="user_name">Javier Fernández</p>
+                                    <p class="text">¡Comprar estas carillas ha sido mi mejor inversión "en mí mismo"! Las compré en oferta, no esperaba mucho, pero me equivoqué. La calidad es excelente, en la boca no estorban, te acostumbras muy rápidamente, son fáciles de colocar. Sin duda las recomiendo.</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-2.jpg">
+                                <div class="comm_text">
+                                    <div class="emodji">
+                                        <img src="./images/like.png" alt="">
+                                        <img src="./images/heart.png" alt="">
+                                    </div>
+                                    <p class="user_name">Carmen Navarro</p>
+                                    <p class="text">En mi opinión, las carillas SwissDent son lo mejor que se ha inventado en odontología. No duele, no da miedo y tendrás de una vez unos dientes perfectos.</p>
+                                    <img src="images/comments/com-2-1.jpg" style="max-width: 230px;">
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-3.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Rafael Alonso</p>
+                                    <p class="text">¿Quien encargó estas mismas carillas comparte sus experiencias? Porque yo las encargaba chinas y era una pesadilla...</p>
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-4.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Antonia Moralez</p>
+                                    <p class="text">Rafael, las he estado usando durante tres meses, son muy buenas, no son chinas ... Muy finas, no se oscurecen, se puede beber café y vino, en la boca no se notan en absoluto. Quedan muy naturales, todos mis amigos piensan que llevo cerámica. Definitivamente las recomiendo, ¡especialmente ahora!</p>
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-5.jpg">
+                                <div class="comm_text">
+                                    <div class="emodji">
+                                        <img src="./images/like.png" alt="">
+                                        3
+                                    </div>
+                                    <p class="user_name">Ana Suarez</p>
+                                    <p class="text">¡Merece la pena para todos los que no están contentos con sus dientes! Tengo el esmalte muy oscuro y no puedo blanquearlo, ya que además es muy fino. Pensé en ponerme carillas de cerámica, pero eso arruinaría mis dientes. Estudié mucho para ver cuál podía ser la alternativa y elegí SwissDent y nunca me he arrepentido.</p>
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-6.jpg">
+                                <div class="comm_text">
+                                    <div class="emodji">
+                                        <img src="./images/like.png" alt="">
+                                        <img src="./images/heart.png" alt="">
+                                    </div>
+                                    <p class="user_name">Alejandro Blanco</p>
+                                    <p class="text">Trabajo en un concesionario de coches y la sonrisa lo es todo para mí. Pero sufro de fluorosis, ya que pasé mi infancia en la ciudad donde el agua está saturada de flúor. Fui al médico para blanquearme los dientes, pero me lo desaconsejaron, diciendo que las manchas seguirían siendo visibles. Empecé a pensar en ponerme carillas, pero el precio es horrible, yo no gano tanto. Decidí probar las carillas removibles. Elegí SwissDent y no me equivoqué. Se ajustan perfectamente, la calidad es excelente. ¡Quedan genial!</p>
+                                    <img src="images/comments/com-6-1.jpg" style="max-width: 230px;">
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-7.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Dolores Molina</p>
+                                    <p class="text">Yo también trabajo con personas. Intento ir al dentista con regularidad, hacerme blanqueamientos y limpiezas dentales. Y hace poco noté que mis dientes se volvieron sensibles, mi médico me dijo que no debía blanquearme más los dientes y me recomendó SwissDent como alternativa. Dudé, pensé que sería muy incómodo y que cambiaría la dicción. Después de todo, decidí probarlo porque el precio es incluso inferior al de una limpieza normal. Todos mis temores resultaron infundados. Son muy finas, por lo que ni siquiera se notan, pero son muy duraderas, mi dicción no cambia, no se oscurecen con el tiempo, ni siquiera con el café o los cigarrillos. Se ajustan perfectamente, por lo que puedo llevarlas todo el día y comer con ellas puestas. Los materiales son de alta calidad. Son fáciles de cuidar. Así que estoy muy contenta con mi compra.</p>
+                        
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-8.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Manuela Rubio</p>
+                                    <p class="text">Hacía tiempo que quería mejorar estéticamente mi sonrisa. Mis dientes superiores eran feos, con empastes, que con el tiempo se oscurecen y dañan el aspecto de los dientes. En fin, últimamente me avergonzaba de sonreír y me propuse ahorrar dinero para tener unos dientes bonitos a toda costa, ya que todo es muy caro. He comprado SwissDent mientras ahorraba y estoy muy contenta con ellas. Ahora puedo sonreír sin timidez.</p>
+                                    <img src="images/comments/com-8-1.jpg" style="max-width: 230px;">
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-9.jpg">
+                                <div class="comm_text">
+                            
+                                    <p class="user_name">Victoria Santos</p>
+                                    <p class="text">¿Podéis decirme si se adaptan a todo el mundo? ¿Cuánto tarda la entrega?</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora</p>
+                                </div>
+                            </div>
+                            <div class="comment" style="margin-left: 20px;">
+                                <img class="avatar" src="images/comments/com-10.jpg">
+                                <div class="comm_text">
+                                    <div class="emodji">
+                                        <img src="./images/like.png" alt="">
+                                        5
+                                    </div>
+                                    <p class="user_name">Júlia Garrido</p>
+                                    <p class="text">Victoria, las tallas de SwissDent son universales. Una entrega de 1 a 3 días laborables, pagas al mensajero cuando las recibas.</p>
+                        
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment" style="margin-left: 40px;">
+                                <img class="avatar" src="images/comments/com-9.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Victoria Santos</p>
+                                    <p class="text">Júlia, es decir ¿puedo hacer un pedido para mi y para mi marido?</p>
+                        
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment" style="margin-left: 60px;">
+                                <img class="avatar" src="images/comments/com-10.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Júlia Garrido</p>
+                                    <p class="text">Victoria, sí, yo hice esto mismo.</p>
+                        
+                        
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-11.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Verónica Cortés</p>
+                                    <p class="text">Recibí mis carillas hace una semana. Mis dientes no están rectos y no quiero ponerme aparato, pero tampoco quiero ir por ahí con ellos porque son horrorosos. ¡Ahora tengo una sonrisa como una estrella! Suave y blanca. No he tenido ningún problema y mi sonrisa es maravillosa).</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-12.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Patricia León</p>
+                                    <p class="text">También encargué las carillas. La entrega fue muy rápida, tardó solo 2 días. ¡No te puedes ni imaginar lo agradable que es tener una sonrisa de Hollywood!</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-13.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Andres Calvo</p>
+                                    <p class="text">Pedí las carillas y me las entregarán mañana. Tengo algunos dientes delanteros astillados y mi asesor dijo que cubrirán mis imperfecciones.</p>
+                                    <img src="images/comments/com-13-1.jpg" style="max-width: 230px;">
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment" style="margin-left: 20px;">
+                                <img class="avatar" src="images/comments/com-14.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Mercedes Herrera</p>
+                                    <p class="text">Andres, ¿podrías escribir cómo te resultan? Tengo la misma situación, me gustaría probarlas, ¡pero tengo miedo!</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment" style="margin-left: 40px;">
+                                <img class="avatar" src="images/comments/com-13.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Andres Calvo</p>
+                                    <p class="text">Mercedes, aquí tienes. Estoy muy satisfecho. ¡No tengas miedo de pedirlas!</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-15.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Teresa Márques</p>
+                                    <p class="text">Chicas, no perdáis tiempo en tonterías. 10 veces que he hecho el blanqueo y todo lo que he podido y nada funcionaba. ¡Más de un año llevo estas carillas y he recibido muchos cumplidos. Yo misma estoy contentísima!</p>
+                                    <img src="images/comments/com-15-1.jpg" style="max-width: 230px;">
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-16.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Irene Vega</p>
+                                    <p class="text">Mi suegra compró estas carillas. Son geniales. Tiene una verdadera sonrisa de Hollywood. Incluso parece más joven. Yo también las he pedido para mí.</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <img class="avatar" src="images/comments/com-17.jpg">
+                                <div class="comm_text">
+                                    <p class="user_name">Alba Lozano</p>
+                                    <p class="text">Mis dientes son como de verdad, los llevo desde hace 4 meses y no cambian su color y forma, y eso que mis dientes son horribles, tengo un hueco entre los dientes, y algunas manchas, y un diente que sobresale por delante. Mi madre siempre me ha dicho que soy una chica muy guapa, pero mis dientes necesitan corrección, pero no tengo dinero y me dan miedo los dentistas. He pedido SwissDent. ¡En fin, creo que unos dientes bonitos cambian a cualquiera!</p>
+                                </div>
+                                <div class="down-menu">
+                                    <p class="down-menu-like">Me gusta</p>
+                                    <p class="down-menu-answer none">Contestar</p>
+                                    <p class="down-menu-translate none">Traducir</p>
+                                    <p class="time"> Hace más de una hora </p>
+                                </div>
+                            </div>
+                            <br>
+                            <a class="knopka" href="#form_section" style="display:block; max-width:400px; margin:0 auto">PEDIR <br>SWISSDENT</a>
+                            <br>&nbsp;<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
     </div>
     <script type="text/javascript" src="js/lib.js"></script>
